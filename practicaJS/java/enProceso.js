@@ -7,33 +7,133 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /*
-Archivo unico para manejar el React de la página
+Archivo unico para manejar el React de la página.
+
 */
 
 /*************************
   Clases
  *************************/
 
-var Probando = function (_React$Component) {
-  _inherits(Probando, _React$Component);
+var CuatroImagenes = function (_React$Component) {
+  _inherits(CuatroImagenes, _React$Component);
 
-  function Probando(props) {
-    _classCallCheck(this, Probando);
+  function CuatroImagenes(props) {
+    _classCallCheck(this, CuatroImagenes);
 
-    var _this = _possibleConstructorReturn(this, (Probando.__proto__ || Object.getPrototypeOf(Probando)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (CuatroImagenes.__proto__ || Object.getPrototypeOf(CuatroImagenes)).call(this, props));
 
     _this.state = '';
     return _this;
   }
 
-  _createClass(Probando, [{
-    key: 'render',
+  _createClass(CuatroImagenes, [{
+    key: "render",
     value: function render() {
-      return React.createElement('img', { src: 'https://i.pinimg.com/originals/bd/3d/0d/bd3d0d5df70b29cc4e6300386f17cab6.png' });
+      return React.createElement(
+        "div",
+        { "class": "container" },
+        React.createElement(
+          "div",
+          { "class": "row" },
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          ),
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          ),
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          ),
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          )
+        ),
+        React.createElement(
+          "div",
+          { "class": "row" },
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          ),
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          ),
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          ),
+          React.createElement(
+            "div",
+            { "class": "col-sm-3" },
+            React.createElement("img", {
+              src: "https://vignette.wikia.nocookie.net/kaguyasama-wa-kokurasetai/images/7/7c/ChikaFujiwara-02.png/revision/latest/scale-to-width-down/258?cb=20171223124642" }),
+            React.createElement(
+              "a",
+              { href: "#" },
+              "Chika Fujiwara"
+            )
+          )
+        )
+      );
     }
   }]);
 
-  return Probando;
+  return CuatroImagenes;
 }(React.Component);
 
 /*************************
@@ -42,7 +142,7 @@ var Probando = function (_React$Component) {
 
 function cargaImagen() {
   var domContainer = document.querySelector('#en_proceso');
-  ReactDOM.render(React.createElement(Probando, null), domContainer);
+  ReactDOM.render(React.createElement(CuatroImagenes, null), domContainer);
 }
 
 /*************************

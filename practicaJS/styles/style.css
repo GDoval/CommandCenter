@@ -5,7 +5,7 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #6d7fcc;
 }
 
 p {
@@ -190,8 +190,14 @@ a.article:hover {
 
 #en_proceso {
     float:right;
-    position:absolute;
-    right:500px;
-    bottom:10px;
+    position:relative ;
+    top: 120px;
+    right:200px;
+    bottom:500px;
     clear:right;
+}
+
+.img{
+  width:258px;
+  height:331px;
 }
