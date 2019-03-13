@@ -24,11 +24,16 @@ La idea sería ofrecer las siguientes funcionalidades:
     1.b) Agregar texto a cada imagen -> Hecho
     1.c) Acomodar bien el div con las imagenes -> Hecho
     
-2) Armar el backend para la categoria anime
+2) Traer informacion desde el backend y renderizarla -> Hecho
     2.a) Traer la información con la que popular el listado desde una base de datos -> Hecho
     2.b) Encodear el retorno de la db en un JSON y devolover eso al AJAX -> Hecho
     2.c) Renderizar el div usando la informacion que volvio de la base de datos -> Hecho
-    2.d) Generar los ROW de React dinámicamente a partir de la cantidad de imagenes traidas dsde la DB -> Pendiente
+    2.d) Generar los ROW de React dinámicamente a partir de la cantidad de imagenes traidas dsde la DB -> Hecho
+
+3) Generar umn formulario para dar de alta nuevos animes
+    3.a) Guardar dentro del proyecto las imagenes (dejar de guardar links de internet) -> Pendiente
+    3.b) Hacer el form para guardar la info en la DB -> Pendiente
+    3.c) Usar Puppeter o CURL para buscar informacion (sinopsis, cant de capitulos etc) sobre la serie en alguna Wiki -> Pendiente
 
 
 */
