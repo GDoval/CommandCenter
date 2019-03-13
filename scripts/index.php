@@ -16,8 +16,8 @@ $config['addContentLengthHeader'] = false;
 $app = new \Slim\App(["settings" => $config]);
 
 $app->get('/saludar[/]', function (Request $request, Response $response) {    
-    $variable = new Pruebas($_GET['nombre']);
-    //$response->getBody()->write($variable->saludar());
+    $variable = $_GET['nombre'];
+    $response->getBody()->write("Hola " . $variable);
     return $response;
 });
 
@@ -34,7 +34,7 @@ $app->post('/arrays', function (Request $request, Response $response){
 
 });
 
-$app->post('/test', function(Request $request, Response $response){
+$app->post('/traerDesdeDB', function(Request $request, Response $response){
     $var = new Pruebas("");
     $response->getBody()->write($var->traigoImagenesDB());
     return $response;

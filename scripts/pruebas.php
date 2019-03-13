@@ -37,10 +37,14 @@ class Pruebas
         $resp5->ruta = "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmyanimelist.cdn-dena.com%2Fimages%2Fcharacters%2F11%2F335335.jpg&f=1";
         
         $resp6 = new stdClass();
-        $resp6->nombre = "adadas";
+        $resp6->nombre = "Raphtalia";
         $resp6->ruta = "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.awwni.me%2F16x6w.jpg&f=1";
+
+        $resp7 = new stdClass();
+        $resp7->nombre = "Kaguya";
+        $resp7->ruta = "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.koi-nya.net%2Fimg%2Fsubidos_posts%2F2018%2F06%2Fkaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen-anime-television-1.jpg&f=1";
         
-        $array = array("uno" => $resp, "dos" => $resp2, "tres" => $resp3, "cuatro" => $resp4, "cinco" => $resp5, "seis" => $resp6);
+        $array = array("uno" => $resp, "dos" => $resp2, "tres" => $resp3, "cuatro" => $resp4, "cinco" => $resp5, "seis" => $resp6, "siete" => $resp7);
         echo json_encode($array);
     }
 
