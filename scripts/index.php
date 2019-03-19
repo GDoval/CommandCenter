@@ -40,6 +40,12 @@ $app->post('/traerDesdeDB', function(Request $request, Response $response){
     return $response;
 });
 
+$app->post('/guardarEnDB', function(Request $request, Response $response){
+    $var = new Pruebas("");
+    $response->getBody()->write($var->guardarEnDB($_POST['nombre'], $_FILES['imagen']));
+    return $response;
+});
+
 
 $app->run();
 ?>

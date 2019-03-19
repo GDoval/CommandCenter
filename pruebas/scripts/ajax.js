@@ -5,14 +5,17 @@ $(document).ready(function () {
 
 function saludar() {
 
-    let usuario = $('#usuario').val();
+    let foto = $('#foto')[0].files[0];
     let data = new FormData();
-
-    data.append("usuario", usuario);
-
+    data.append("foto", foto);
+    data.append("nombre", $('#foto')[0].files[0].name   )
+    console.log(foto);
     $.ajax({
-        type: 'GET',
-        url: "./php/conexion.php?nombre=" + usuario,
+        type: 'POST',
+        url: "./php/conexion.php",
+        data: data,
+        contentType: false,
+        processData: false,
         success: function (resp) {
             console.log(resp);
         },
@@ -23,7 +26,3 @@ function saludar() {
             console.log("I have failed you :( ");
         });
 }
-
-
-
-

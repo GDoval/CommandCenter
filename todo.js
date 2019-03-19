@@ -20,7 +20,7 @@ La idea sería ofrecer las siguientes funcionalidades:
 **Pasos a seguir**
 
 1) Armar un front para la categoria anime -> Hecho
-    1.a) Armar un div que tenga 4 imagenes de largo para el listado -> Hecho
+    1.a) Armar un div que tenga 3 imagenes de largo para el listado -> Hecho
     1.b) Agregar texto a cada imagen -> Hecho
     1.c) Acomodar bien el div con las imagenes -> Hecho
     
@@ -31,9 +31,10 @@ La idea sería ofrecer las siguientes funcionalidades:
     2.d) Generar los ROW de React dinámicamente a partir de la cantidad de imagenes traidas dsde la DB -> Hecho
 
 3) Generar umn formulario para dar de alta nuevos animes
-    3.a) Guardar dentro del proyecto las imagenes (dejar de guardar links de internet) -> Pendiente
-    3.b) Hacer el form para guardar la info en la DB -> Pendiente
-    3.c) Usar Puppeter o CURL para buscar informacion (sinopsis, cant de capitulos etc) sobre la serie en alguna Wiki -> Pendiente
+    3.a) Guardar dentro del proyecto las imagenes (dejar de guardar links de internet) -> Hecho
+    3.b) Hacer el form para guardar la info en la DB -> Hecho
+    3.c) Desmontar del DOM los componentes de React según qué opción se elija -> Hecho
 
+4) Usar Puppeter o CURL para buscar informacion (sinopsis, cant de capitulos etc) sobre la serie en alguna Wiki -> Pendiente
 
 */

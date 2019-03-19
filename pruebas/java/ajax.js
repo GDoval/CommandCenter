@@ -4,14 +4,17 @@ $(document).ready(function () {
 
 function saludar() {
 
-    var usuario = $('#usuario').val();
+    var foto = $('#foto')[0].files[0];
     var data = new FormData();
-
-    data.append("usuario", usuario);
-
+    data.append("foto", foto);
+    data.append("nombre", $('#foto')[0].files[0].name);
+    console.log(foto);
     $.ajax({
-        type: 'GET',
-        url: "./php/conexion.php?nombre=" + usuario,
+        type: 'POST',
+        url: "./php/conexion.php",
+        data: data,
+        contentType: false,
+        processData: false,
         success: function success(resp) {
             console.log(resp);
         },

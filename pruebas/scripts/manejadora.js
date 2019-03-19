@@ -47,8 +47,27 @@ class GenerarRow extends React.Component {
             </div>
         );
     }
-
 }
+
+
+class GenerarFormAlta extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = '';
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <input type="text" id="nombre" placeholder="Nombre Anime"></input>
+                <input type="file" id="imagen" placeholder="Imagen"></input>
+                <button type="button" id="btnEnviar" onClick={this.props.guardar}>Guardar</button>
+            </React.Fragment>
+        );
+    }
+}
+
+
 
 
 /***************************************************************************************************** */
@@ -70,14 +89,41 @@ function retornoDB(callback) {
 /* Pruebas */
 
 
+
+function guardar() {
+    let imagen = $('#imagen')[0].files[0];
+    let nombre = $('#nombre').val();
+    let data = new FormData();
+    data.append("imagen", imagen);
+    data.append("nombre", nombre);
+    data.append("nombreImg", $('#imagen')[0].files[0].name);
+    $.ajax({
+        type: 'POST',
+        url: "./php/conexion.php",
+        data: data,
+        contentType: false,
+        processData: false,
+        success: function (resp) {
+            console.log(resp);
+        },
+        async: true
+    })
+
+        .fail(function () {
+            console.log("I have failed you :( ");
+        });
+
+}
+
+
+
 function generoRows() {
+    btnEnviar
     retornoDB(function (data) {
         let json = JSON.parse(data);
-        if(json.length % 3 == 0)
-        {
+        if (json.length % 3 == 0) {
             restoEsCero(json);
-        }else
-        {
+        } else {
             restoNoEsCero(json);
         }
     });
@@ -171,28 +217,17 @@ function restoNoEsCero(json) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function () {
     $('#btnEnviar').click(renderizarOnReady);
+    $('#unmount').click(renderForm);
 });
+
+function renderForm() {
+    const domContainer = document.querySelector('#root');
+    ReactDOM.render(<GenerarFormAlta guardar={guardar} />, domContainer);
+}
+
+
 
 function renderizarOnReady() {
     const domContainer = document.querySelector('#root');
